@@ -15,14 +15,14 @@ export default function Contact() {
               copy="Send the basics and we'll follow up with the right next step for your scope, stage, and risk profile."
               light
             />
-            <div className="space-y-4 text-white/72">
+            <div className="space-y-4 text-white/80">
               <p><strong>Office:</strong> 400 Interstate North Pkwy, Atlanta, GA</p>
               <p><strong>Email:</strong> hello@apexadvisors.example</p>
               <p><strong>Phone:</strong> (404) 566-5855</p>
             </div>
             <div className="mt-10 border-t border-white/15 pt-6">
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-gold">Best first note</p>
-              <p className="mt-4 leading-8 text-white/72">
+              <p className="mt-4 leading-8 text-white/78">
                 Share the project location, current stage, target dates, approximate size, known constraints, and the decision you need help making. A rough description is enough to start.
               </p>
             </div>

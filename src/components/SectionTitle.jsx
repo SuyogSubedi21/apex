@@ -8,7 +8,7 @@ export default function SectionTitle({ eyebrow, title, copy, light = false }) {
         <p className={`mb-3 text-xs font-extrabold uppercase tracking-[0.22em] ${light ? "text-gold" : "text-gold"}`}>{eyebrow}</p>
         <h2 className={`max-w-3xl font-display text-4xl font-semibold leading-[1.02] md:text-5xl ${light ? "text-white" : "text-black"}`}>{title}</h2>
       </div>
-      {copy ? <p className={`max-w-xl text-[0.98rem] leading-8 ${light ? "text-white/70" : "text-black/78"}`}>{copy}</p> : null}
+      {copy ? <p className={`max-w-xl text-[0.98rem] leading-8 ${light ? "text-white/78" : "text-black/78"}`}>{copy}</p> : null}
     </motion.div>
   );
 }

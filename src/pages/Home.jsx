@@ -12,7 +12,7 @@ export function Hero() {
         <motion.div {...fadeUp}>
           <p className="mb-5 text-xs font-extrabold uppercase tracking-[0.24em] text-gold">Commercial construction consulting</p>
           <h1 className="max-w-3xl font-display text-5xl font-semibold leading-[0.98] text-white sm:text-6xl md:text-7xl">Built with discipline. Delivered with confidence.</h1>
-          <p className="mt-7 max-w-xl text-base leading-8 text-white/76 sm:text-lg">
+          <p className="mt-7 max-w-xl text-base leading-8 text-white/82 sm:text-lg">
             Apex Construction helps owners and contractors plan smarter, control risk, and deliver complex commercial projects with sharper visibility from preconstruction through closeout.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
@@ -23,7 +23,7 @@ export function Hero() {
             {["18+ yrs", "$420M", "24/7"].map((stat, index) => (
               <motion.div key={stat} {...itemReveal} className={index === 0 ? "" : "border-l border-white/15 pl-5"}>
                 <p className="font-display text-2xl font-semibold text-white sm:text-3xl">{stat}</p>
-                <p className="mt-1 text-xs font-bold uppercase tracking-[0.13em] text-white/56">
+                <p className="mt-1 text-xs font-bold uppercase tracking-[0.13em] text-white/68">
                   {["field leadership", "advised value", "site coordination"][index]}
                 </p>
               </motion.div>
@@ -36,7 +36,7 @@ export function Hero() {
             alt="Construction crew reviewing a commercial build site"
             className="h-[440px] w-full object-cover sm:h-[520px] lg:h-[590px]"
           />
-          <div className="absolute bottom-0 left-0 right-0 border-t border-white/20 bg-charcoal/84 p-5 backdrop-blur-md">
+          <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/20 bg-charcoal/90 p-5 backdrop-blur-md">
             <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-gold">Current focus</p>
             <p className="mt-2 text-lg font-bold text-white">Preconstruction risk, schedule control, and active-site logistics.</p>
           </div>
@@ -116,7 +116,7 @@ export function ProcessPreview() {
             <motion.article key={step.title} {...itemReveal} className="border-t border-gold/80 pt-6">
               <p className="font-display text-4xl font-semibold text-white">{String(index + 1).padStart(2, "0")}</p>
               <h3 className="mt-8 text-xl font-extrabold text-white">{step.title}</h3>
-              <p className="mt-4 leading-7 text-white/72">{step.copy}</p>
+              <p className="mt-4 leading-7 text-white/78">{step.copy}</p>
             </motion.article>
           ))}
         </motion.div>

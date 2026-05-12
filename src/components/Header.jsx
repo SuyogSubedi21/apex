@@ -1,3 +1,4 @@
+import { motion, useScroll } from "framer-motion";
 import logoUrl from "../assets/logo.svg";
 
 const navItems = [
@@ -10,8 +11,11 @@ const navItems = [
 ];
 
 export default function Header() {
+  const { scrollYProgress } = useScroll();
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/16 bg-black">
+      <motion.div className="absolute bottom-0 left-0 h-[2px] w-full origin-left bg-gold" style={{ scaleX: scrollYProgress }} />
       <div className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-5 px-5 sm:px-8 lg:px-10">
         <a href="/" className="flex items-center gap-3 text-white">
           <img src={logoUrl} alt="Apex Construction" className="h-10 w-10" />

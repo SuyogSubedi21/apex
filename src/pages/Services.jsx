@@ -60,7 +60,7 @@ export default function Services() {
               <motion.article key={step.title} {...itemReveal} className="border-t border-gold/80 pt-6">
                 <p className="font-display text-4xl font-semibold text-white">{String(index + 1).padStart(2, "0")}</p>
                 <h3 className="mt-8 text-xl font-extrabold text-white">{step.title}</h3>
-                <p className="mt-4 leading-7 text-white/72">{step.copy}</p>
+                <p className="mt-4 leading-7 text-white/78">{step.copy}</p>
               </motion.article>
             ))}
           </motion.div>

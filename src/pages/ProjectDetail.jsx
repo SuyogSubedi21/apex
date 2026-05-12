@@ -71,7 +71,7 @@ export default function ProjectDetail({ slug }) {
         <div className="mx-auto max-w-7xl">
           <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-gold">Lessons carried forward</p>
           <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.02] text-white md:text-5xl">Good delivery starts when risk is visible enough to manage.</h2>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/72">
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/78">
             Across projects like {project.title}, Apex focuses on the habits that keep work stable: decision clarity, honest reporting, clean documentation, and field coordination that respects how construction actually happens.
           </p>
         </div>
