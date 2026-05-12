@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: #f4f0e8;
+    color: #151515;
+  }
+
+  ::selection {
+    background: #f6b73c;
+    color: #000000;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    border-radius: 9999px;
+    background: #f6b73c;
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: #111111;
+    transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    box-shadow: 0 16px 35px rgba(246, 183, 60, 0.18);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    background: #ffd06f;
+  }
+
+  .btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 9999px;
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: #ffffff;
+    transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    background: #ffffff;
+    color: #111111;
+  }
+
+  .surface-card {
+    border: 1px solid rgba(21, 21, 21, 0.1);
+    background: rgba(255, 255, 255, 0.62);
+    box-shadow: 0 22px 60px rgba(20, 20, 20, 0.08);
+  }
+
+  .field {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: #101010;
+    padding: 0.95rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+  }
+
+  .field:focus {
+    border-color: #f6b73c;
+    box-shadow: 0 0 0 3px rgba(246, 183, 60, 0.18);
+  }
+}

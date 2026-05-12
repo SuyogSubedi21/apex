@@ -1,0 +1,43 @@
+# Dependencies and build output
+node_modules/
+dist/
+.vite/
+
+# Logs and local env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+.env.local
+.env.*.local
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Legacy prototype files kept locally but excluded from the deploy repo
+admin-dashboard.html
+admin-menu.html
+book-table.html
+contact.html
+faq.html
+feedback.html
+login.html
+menu.html
+offers.html
+order-confirmation.html
+payment.html
+place-order.html
+portfolio.html
+register.html
+reports.html
+reservations.html
+services.html
+user-dashboard.html
+public/*.html
+public/_head.html
+public/style.css
+public/logo.svg
