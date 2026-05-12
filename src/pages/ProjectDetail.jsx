@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { projects } from "../data/siteData.js";
+import { imageReveal, itemReveal, stagger } from "../utils/animation.js";
 
 export default function ProjectDetail({ slug }) {
   const project = projects.find((item) => item.slug === slug) || projects[0];
@@ -26,7 +28,9 @@ export default function ProjectDetail({ slug }) {
               </div>
             </div>
           </div>
-          <img src={project.image} alt={project.title} className="mt-12 h-[560px] w-full rounded-sm object-cover shadow-premium" />
+          <motion.div {...imageReveal} className="image-frame mt-12 h-[560px] rounded-sm">
+            <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
+          </motion.div>
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
               <h2 className="font-display text-4xl font-semibold text-black">Project overview</h2>
@@ -53,14 +57,14 @@ export default function ProjectDetail({ slug }) {
               <p className="mt-4 leading-8 text-black">{project.outcome}</p>
             </div>
           </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <motion.div {...stagger} className="mt-12 grid gap-5 md:grid-cols-3">
             {["Decision log", "Risk register", "Closeout tracker"].map((item) => (
-              <div key={item} className="surface-card p-6">
+              <motion.div key={item} {...itemReveal} className="surface-card p-6">
                 <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-black">{item}</p>
                 <p className="mt-4 leading-7 text-black">Maintained as a working tool so the team could see ownership, status, and next actions without chasing scattered updates.</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="bg-charcoal px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28">

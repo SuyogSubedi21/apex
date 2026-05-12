@@ -1,3 +1,4 @@
+import { motion, useScroll } from "framer-motion";
 import logoUrl from "../assets/logo.svg";
 
 const navItems = [
@@ -10,8 +11,11 @@ const navItems = [
 ];
 
 export default function Header() {
+  const { scrollYProgress } = useScroll();
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/20 bg-black">
+    <motion.header initial={{ y: -18, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.45, ease: "easeOut" }} className="fixed inset-x-0 top-0 z-50 border-b border-white/20 bg-black">
+      <motion.div className="absolute bottom-0 left-0 h-[2px] w-full origin-left bg-gold" style={{ scaleX: scrollYProgress }} />
       <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 lg:px-10">
         <a href="/" className="flex items-center gap-3 text-white">
           <img src={logoUrl} alt="Apex Construction" className="h-11 w-11" />
@@ -22,7 +26,7 @@ export default function Header() {
         </a>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
           {navItems.map(([label, href]) => (
-            <a key={label} href={href} className="text-sm font-semibold text-white/72 transition hover:text-white">
+            <a key={label} href={href} className="nav-link">
               {label}
             </a>
           ))}
@@ -33,11 +37,11 @@ export default function Header() {
       </div>
       <nav className="flex gap-5 overflow-x-auto border-t border-white/20 bg-black px-5 py-3 text-sm sm:px-8 lg:hidden" aria-label="Mobile navigation">
         {navItems.map(([label, href]) => (
-          <a key={label} href={href} className="shrink-0 font-semibold text-white/72 transition hover:text-white">
+          <a key={label} href={href} className="nav-link shrink-0">
             {label}
           </a>
         ))}
       </nav>
-    </header>
+    </motion.header>
   );
 }

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "../components/SectionTitle.jsx";
 import { faqs } from "../data/siteData.js";
-import { fadeUp } from "../utils/animation.js";
+import { itemReveal, stagger } from "../utils/animation.js";
 
 export default function FAQ() {
   return (
@@ -13,14 +13,14 @@ export default function FAQ() {
             title="Straight answers before the first meeting."
             copy="Here are the questions owners, contractors, and operators usually ask before bringing Apex into a project conversation."
           />
-          <div className="grid gap-5 md:grid-cols-2">
+          <motion.div {...stagger} className="grid gap-5 md:grid-cols-2">
             {faqs.map(([question, answer]) => (
-              <motion.div key={question} {...fadeUp} className="surface-card p-7">
+              <motion.div key={question} {...itemReveal} className="surface-card p-7">
                 <h3 className="text-xl font-extrabold text-black">{question}</h3>
                 <p className="mt-4 leading-7 text-black">{answer}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="bg-charcoal px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28">

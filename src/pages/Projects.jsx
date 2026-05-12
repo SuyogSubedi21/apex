@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "../components/SectionTitle.jsx";
 import { projects } from "../data/siteData.js";
-import { fadeUp } from "../utils/animation.js";
+import { itemReveal, stagger } from "../utils/animation.js";
 
 export default function Projects() {
   return (
@@ -13,17 +13,17 @@ export default function Projects() {
             title="Featured construction advisory portfolios."
             copy="Each project opens into a focused portfolio page with context, scope, and advisory outcomes."
           />
-          <div className="mb-12 grid gap-5 md:grid-cols-3">
+          <motion.div {...stagger} className="mb-12 grid gap-5 md:grid-cols-3">
             {["Industrial delivery", "Commercial interiors", "Public-facing work"].map((item) => (
-              <motion.div key={item} {...fadeUp} className="surface-card p-5">
+              <motion.div key={item} {...itemReveal} className="surface-card p-5">
                 <p className="text-sm font-extrabold uppercase tracking-[0.14em] text-black">{item}</p>
               </motion.div>
             ))}
-          </div>
-          <div className="grid gap-12 lg:grid-cols-3">
+          </motion.div>
+          <motion.div {...stagger} className="grid gap-12 lg:grid-cols-3">
             {projects.map((project) => (
-              <motion.a key={project.slug} href={`/projects/${project.slug}`} {...fadeUp} className="group block transition hover:-translate-y-1">
-                <div className="h-80 overflow-hidden rounded-sm shadow-premium">
+              <motion.a key={project.slug} href={`/projects/${project.slug}`} {...itemReveal} whileHover={{ y: -8 }} className="group block">
+                <div className="image-frame h-80 rounded-sm">
                   <img src={project.image} alt={project.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 </div>
                 <div className="pt-6">
@@ -41,7 +41,7 @@ export default function Projects() {
                 </div>
               </motion.a>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="bg-charcoal px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28">
@@ -52,13 +52,13 @@ export default function Projects() {
             copy="Apex is brought in when the work needs more than a standard checklist: active operations, multiple decision makers, compressed timelines, or scope that needs sharper definition."
             light
           />
-          <div className="grid gap-5 md:grid-cols-2">
+          <motion.div {...stagger} className="grid gap-5 md:grid-cols-2">
             {["Risk review before mobilization", "Weekly owner visibility", "Trade and stakeholder alignment", "Cleaner closeout documentation"].map((item) => (
-              <motion.div key={item} {...fadeUp} className="border-t border-gold pt-5">
+              <motion.div key={item} {...itemReveal} className="border-t border-gold pt-5">
                 <p className="text-lg font-bold text-white">{item}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

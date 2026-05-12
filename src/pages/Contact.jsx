@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "../components/SectionTitle.jsx";
 import { contactReasons } from "../data/siteData.js";
-import { fadeUp } from "../utils/animation.js";
+import { fadeUp, itemReveal, stagger } from "../utils/animation.js";
 
 export default function Contact() {
   return (
@@ -50,13 +50,13 @@ export default function Contact() {
             title="Bring us in when the project needs sharper control."
             copy="You do not need a perfect scope before the first conversation. Apex can help shape the question, identify the risk, and recommend the right level of support."
           />
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <motion.div {...stagger} className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {contactReasons.map((reason) => (
-              <motion.div key={reason} {...fadeUp} className="surface-card p-6">
+              <motion.div key={reason} {...itemReveal} className="surface-card p-6">
                 <p className="text-lg font-extrabold text-black">{reason}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="bg-paper px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
@@ -66,7 +66,7 @@ export default function Contact() {
             ["30 minute review", "Enough time to understand the core risk and next step."],
             ["No pressure", "If Apex is not the right fit, we will say so clearly."]
           ].map(([stat, copy]) => (
-            <motion.div key={stat} {...fadeUp} className="border-t border-gold pt-6">
+            <motion.div key={stat} {...itemReveal} className="border-t border-gold pt-6">
               <p className="font-display text-5xl font-semibold text-black">{stat}</p>
               <p className="mt-4 leading-7 text-black">{copy}</p>
             </motion.div>

@@ -25,6 +25,37 @@
 }
 
 @layer components {
+  .nav-link {
+    position: relative;
+    display: inline-flex;
+    padding-bottom: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.72);
+    transition: color 180ms ease;
+  }
+
+  .nav-link::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    content: "";
+    background: #f6b73c;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 220ms ease;
+  }
+
+  .nav-link:hover {
+    color: #ffffff;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
   .btn-primary {
     border-radius: 9999px;
     background: #f6b73c;
@@ -39,6 +70,7 @@
   .btn-primary:hover {
     transform: translateY(-2px);
     background: #ffd06f;
+    box-shadow: 0 20px 48px rgba(246, 183, 60, 0.28);
   }
 
   .btn-secondary {
@@ -59,8 +91,44 @@
 
   .surface-card {
     border: 1px solid rgba(21, 21, 21, 0.1);
-    background: rgba(255, 255, 255, 0.62);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(255, 250, 240, 0.58));
     box-shadow: 0 22px 60px rgba(20, 20, 20, 0.08);
+    transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  }
+
+  .surface-card:hover {
+    border-color: rgba(246, 183, 60, 0.45);
+    box-shadow: 0 28px 70px rgba(20, 20, 20, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .image-frame {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(246, 183, 60, 0.28);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.14);
+  }
+
+  .image-frame::after {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
+    background: linear-gradient(135deg, rgba(246, 183, 60, 0.2), transparent 32%, transparent 70%, rgba(17, 24, 29, 0.26));
+    opacity: 0.72;
+  }
+
+  .grid-accent {
+    background-image:
+      linear-gradient(rgba(246, 183, 60, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(246, 183, 60, 0.08) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+  }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(246, 183, 60, 0.9), transparent);
   }
 
   .field {
