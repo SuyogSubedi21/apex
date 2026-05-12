@@ -1,20 +1,68 @@
 export const services = [
   {
     title: "Preconstruction Planning",
-    copy: "Budget alignment, constructability review, procurement strategy, and risk planning before the first crew arrives."
+    copy: "Budget alignment, constructability review, procurement strategy, and risk planning before the first crew arrives.",
+    points: ["Early estimate validation", "Bid package strategy", "Constructability reviews", "Procurement risk mapping"]
   },
   {
     title: "Commercial Buildouts",
-    copy: "Tenant improvements, office renovations, hospitality interiors, and phased work in active business environments."
+    copy: "Tenant improvements, office renovations, hospitality interiors, and phased work in active business environments.",
+    points: ["Occupied-site phasing", "Finish coordination", "Landlord communication", "Punch list control"]
   },
   {
     title: "Industrial Facilities",
-    copy: "Durable project delivery for warehouses, light manufacturing, service yards, and logistics infrastructure."
+    copy: "Durable project delivery for warehouses, light manufacturing, service yards, and logistics infrastructure.",
+    points: ["Yard logistics", "Equipment coordination", "Utility sequencing", "Safety planning"]
   },
   {
     title: "Project Controls",
-    copy: "Schedule discipline, cost reporting, change management, field coordination, and executive visibility."
+    copy: "Schedule discipline, cost reporting, change management, field coordination, and executive visibility.",
+    points: ["Schedule recovery", "Cost-to-complete reporting", "Change tracking", "Executive dashboards"]
   }
+];
+
+export const processSteps = [
+  {
+    title: "Listen and map the work",
+    copy: "We start by understanding the business objective, site constraints, stakeholders, decision path, and the pressure points already showing up in the project."
+  },
+  {
+    title: "Build the control plan",
+    copy: "Apex turns the scope into a clear plan for budgets, schedule, procurement, approvals, field communication, and owner reporting."
+  },
+  {
+    title: "Coordinate the field rhythm",
+    copy: "We help teams stay aligned through weekly cadence, issue logs, site observations, trade coordination, and practical follow-through."
+  },
+  {
+    title: "Close with discipline",
+    copy: "Closeout is managed as part of delivery, with punch lists, documentation, turnover items, and final accountability tracked early."
+  }
+];
+
+export const values = [
+  ["Clarity before speed", "A rushed project can look busy while quietly losing money. We slow down the right decisions so the field can move faster later."],
+  ["Field reality matters", "Plans are tested against access, weather, lead times, trade stacking, safety, and the daily realities of active job sites."],
+  ["Owners need usable truth", "Reports should help people decide, not bury them in noise. We keep leadership informed with practical risk and cost visibility."],
+  ["Respect for every trade", "Good delivery depends on the people doing the work. We create structure that helps teams coordinate instead of collide."]
+];
+
+export const industries = [
+  "Corporate offices",
+  "Retail and hospitality",
+  "Logistics hubs",
+  "Light industrial",
+  "Municipal facilities",
+  "Healthcare support spaces",
+  "Mixed-use renovations",
+  "Service yards"
+];
+
+export const serviceApproach = [
+  "A single point of contact for owner communication, contractor coordination, and decision tracking.",
+  "Practical reporting that makes budget movement, schedule pressure, and unresolved issues visible.",
+  "Field-first planning around access, staging, business continuity, inspections, and safety constraints.",
+  "Closeout preparation that begins before the final month, reducing handoff friction and late surprises."
 ];
 
 export const projects = [
@@ -75,5 +123,20 @@ export const faqs = [
   ["What size projects do you handle?", "We work best on commercial, industrial, and specialty construction projects where planning, coordination, and reporting matter as much as the build itself."],
   ["Can you work with our existing architect or GC?", "Yes. Apex often joins projects as an owner's advisor, construction manager, or delivery partner alongside an existing design and trade team."],
   ["How early should we involve you?", "The earlier the better. Preconstruction involvement helps reduce rework, protect budgets, and identify sequencing issues before they become expensive."],
-  ["Do you support occupied renovations?", "Yes. We plan phasing, communication, safety controls, and logistics around active facilities so business operations can continue."]
+  ["Do you support occupied renovations?", "Yes. We plan phasing, communication, safety controls, and logistics around active facilities so business operations can continue."],
+  ["Can Apex help after a project is already behind?", "Yes. We can review the schedule, isolate blockers, reset communication, and build a recovery plan around the work that actually controls completion."],
+  ["Do you replace the general contractor?", "Usually no. We are most useful when we strengthen the delivery structure around the owner, GC, designers, vendors, and field teams."],
+  ["What does reporting look like?", "Typical reports include current progress, upcoming decisions, risk items, cost exposure, change status, schedule movement, and owner action items."],
+  ["Do you manage permitting and inspections?", "We can coordinate permit status, inspection readiness, and required documentation as part of a broader delivery or preconstruction scope."],
+  ["Can you support small tenant improvements?", "Yes, when the project has timing pressure, business continuity concerns, or enough complexity to benefit from professional controls."],
+  ["What happens after the first call?", "We usually request drawings, budget context, schedule goals, and known constraints. From there we recommend a focused scope and engagement path."]
+];
+
+export const contactReasons = [
+  "Early budget or schedule validation",
+  "Occupied renovation planning",
+  "Project recovery support",
+  "Owner representation",
+  "Procurement and lead-time review",
+  "Field reporting and controls setup"
 ];

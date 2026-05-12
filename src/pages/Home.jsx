@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionTitle from "../components/SectionTitle.jsx";
 import { fadeUp } from "../utils/animation.js";
-import { projects, services, testimonials } from "../data/siteData.js";
+import { industries, processSteps, projects, services, testimonials } from "../data/siteData.js";
 
 export function Hero() {
   return (
@@ -60,6 +60,13 @@ export function ServicesPreview() {
               <span className="font-display text-3xl font-semibold text-gold">{String(index + 1).padStart(2, "0")}</span>
               <h3 className="mt-9 text-xl font-extrabold text-black">{service.title}</h3>
               <p className="mt-4 leading-7 text-black">{service.copy}</p>
+              <ul className="mt-6 space-y-2">
+                {service.points.slice(0, 3).map((point) => (
+                  <li key={point} className="border-t border-black/10 pt-2 text-sm font-bold text-black">
+                    {point}
+                  </li>
+                ))}
+              </ul>
             </motion.article>
           ))}
         </div>
@@ -93,6 +100,52 @@ export function ProjectsPreview() {
   );
 }
 
+export function ProcessPreview() {
+  return (
+    <section className="bg-charcoal px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28">
+      <div className="mx-auto max-w-7xl">
+        <SectionTitle
+          eyebrow="How we work"
+          title="A delivery rhythm built for decisions, not just meetings."
+          copy="Apex creates a practical operating system for the project: what needs a decision, who owns it, what is at risk, and what has to happen next."
+          light
+        />
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {processSteps.map((step, index) => (
+            <motion.article key={step.title} {...fadeUp} className="border-t border-gold pt-6">
+              <p className="font-display text-4xl font-semibold text-white">{String(index + 1).padStart(2, "0")}</p>
+              <h3 className="mt-8 text-xl font-extrabold text-white">{step.title}</h3>
+              <p className="mt-4 leading-7 text-white/72">{step.copy}</p>
+            </motion.article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function IndustriesPreview() {
+  return (
+    <section className="bg-warm px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <SectionTitle
+          eyebrow="Where Apex fits"
+          title="Built for commercial work with moving parts."
+          copy="We are most valuable when the project has real coordination pressure: active operations, multiple stakeholders, tight procurement, public visibility, or fast business deadlines."
+        />
+        <div className="grid gap-3 sm:grid-cols-2">
+          {industries.map((industry) => (
+            <motion.div key={industry} {...fadeUp} className="surface-card flex items-center justify-between p-5">
+              <span className="font-bold text-black">{industry}</span>
+              <span className="text-gold">+</span>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function Testimonials() {
   return (
     <section className="bg-warm px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
@@ -116,7 +169,9 @@ export default function Home() {
     <>
       <Hero />
       <ServicesPreview />
+      <ProcessPreview />
       <ProjectsPreview />
+      <IndustriesPreview />
       <Testimonials />
     </>
   );
