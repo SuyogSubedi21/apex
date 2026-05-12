@@ -8,12 +8,7 @@ export default function About() {
     <>
       <section className="bg-paper px-5 pb-20 pt-40 sm:px-8 lg:px-10 lg:pb-24 lg:pt-32">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-          <motion.div {...imageReveal} className="image-frame rounded-sm">
-            <img
-              src="https://images.unsplash.com/photo-1541976590-713941681591?w=1400&auto=format&fit=crop&q=84"
-              alt="Construction professionals reviewing plans on site"
-              className="h-[420px] w-full object-cover sm:h-[500px] lg:h-[540px]"
-            />
+          <motion.div {...imageReveal} className="image-frame about-site-visual rounded-sm sm:min-h-[500px] lg:min-h-[540px]" role="img" aria-label="Commercial construction site with crane and structural frame">
             <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/20 bg-charcoal/88 p-5 text-white backdrop-blur-md">
               <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-gold">On-site clarity</p>
               <p className="mt-2 text-base font-bold">Field-tested planning for commercial project teams.</p>
