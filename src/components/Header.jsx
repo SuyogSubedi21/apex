@@ -11,7 +11,7 @@ const navItems = [
 
 export default function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-charcoal/92 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/20 bg-black">
       <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 lg:px-10">
         <a href="/" className="flex items-center gap-3 text-white">
           <img src={logoUrl} alt="Apex Construction" className="h-11 w-11" />
@@ -31,7 +31,7 @@ export default function Header() {
           Request Consultation
         </a>
       </div>
-      <nav className="flex gap-5 overflow-x-auto border-t border-white/10 px-5 py-3 text-sm sm:px-8 lg:hidden" aria-label="Mobile navigation">
+      <nav className="flex gap-5 overflow-x-auto border-t border-white/20 bg-black px-5 py-3 text-sm sm:px-8 lg:hidden" aria-label="Mobile navigation">
         {navItems.map(([label, href]) => (
           <a key={label} href={href} className="shrink-0 font-semibold text-white/72 transition hover:text-white">
             {label}
