@@ -76,6 +76,33 @@ export function ServicesPreview() {
   );
 }
 
+export function SiteVideo() {
+  return (
+    <section className="bg-white px-5 py-20 sm:px-8 lg:px-10 lg:py-24">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+        <SectionTitle
+          eyebrow="Site perspective"
+          title="A clear view of active construction conditions."
+          copy="Construction work is full of moving parts. Apex helps teams turn site activity into organized decisions, realistic schedules, and accountable next steps."
+        />
+        <motion.div {...imageReveal} className="image-frame rounded-sm bg-charcoal">
+          <video
+            className="h-[320px] w-full object-cover sm:h-[430px] lg:h-[500px]"
+            controls
+            muted
+            playsInline
+            preload="metadata"
+            poster="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&auto=format&fit=crop&q=84"
+          >
+            <source src="https://videos.pexels.com/video-files/20568183/20568183-uhd_3840_2160_30fps.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 export function ProjectsPreview() {
   return (
     <section className="bg-paper px-5 py-20 sm:px-8 lg:px-10 lg:py-24">
@@ -170,6 +197,7 @@ export default function Home() {
     <>
       <Hero />
       <ServicesPreview />
+      <SiteVideo />
       <ProcessPreview />
       <ProjectsPreview />
       <IndustriesPreview />

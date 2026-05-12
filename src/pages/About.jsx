@@ -10,10 +10,14 @@ export default function About() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <motion.div {...imageReveal} className="image-frame rounded-sm">
             <img
-              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&auto=format&fit=crop&q=82"
-              alt="Modern commercial construction site"
+              src="https://images.unsplash.com/photo-1541976590-713941681591?w=1400&auto=format&fit=crop&q=84"
+              alt="Construction professionals reviewing plans on site"
               className="h-[420px] w-full object-cover sm:h-[500px] lg:h-[540px]"
             />
+            <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/20 bg-charcoal/88 p-5 text-white backdrop-blur-md">
+              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-gold">On-site clarity</p>
+              <p className="mt-2 text-base font-bold">Field-tested planning for commercial project teams.</p>
+            </div>
           </motion.div>
           <div>
             <SectionTitle
