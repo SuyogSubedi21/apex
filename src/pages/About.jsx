@@ -6,13 +6,13 @@ import { fadeUp, imageReveal, itemReveal, stagger } from "../utils/animation.js"
 export default function About() {
   return (
     <>
-      <section className="bg-paper px-5 pb-20 pt-40 sm:px-8 lg:px-10 lg:pb-28 lg:pt-32">
+      <section className="bg-paper px-5 pb-20 pt-40 sm:px-8 lg:px-10 lg:pb-24 lg:pt-32">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <motion.div {...imageReveal} className="image-frame rounded-sm">
             <img
               src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&auto=format&fit=crop&q=82"
               alt="Modern commercial construction site"
-              className="h-[560px] w-full object-cover"
+              className="h-[420px] w-full object-cover sm:h-[500px] lg:h-[540px]"
             />
           </motion.div>
           <div>
@@ -39,7 +39,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="bg-warm px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+      <section className="bg-warm px-5 py-20 sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             eyebrow="What guides us"
@@ -56,7 +56,7 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-      <section className="bg-charcoal px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28">
+      <section className="bg-charcoal px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionTitle
             eyebrow="Client fit"

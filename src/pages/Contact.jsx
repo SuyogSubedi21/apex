@@ -6,7 +6,7 @@ import { fadeUp, itemReveal, stagger } from "../utils/animation.js";
 export default function Contact() {
   return (
     <>
-      <section className="bg-charcoal px-5 pb-20 pt-40 text-white sm:px-8 lg:px-10 lg:pb-28 lg:pt-32">
+      <section className="bg-charcoal px-5 pb-20 pt-40 text-white sm:px-8 lg:px-10 lg:pb-24 lg:pt-32">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr]">
           <div>
             <SectionTitle
@@ -43,7 +43,7 @@ export default function Contact() {
           </motion.form>
         </div>
       </section>
-      <section className="bg-warm px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+      <section className="bg-warm px-5 py-20 sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             eyebrow="Reasons to reach out"
@@ -59,7 +59,7 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
-      <section className="bg-paper px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+      <section className="bg-paper px-5 py-20 sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-3">
           {[
             ["1 business day", "Typical response time for new project inquiries."],
@@ -67,7 +67,7 @@ export default function Contact() {
             ["No pressure", "If Apex is not the right fit, we will say so clearly."]
           ].map(([stat, copy]) => (
             <motion.div key={stat} {...itemReveal} className="border-t border-gold pt-6">
-              <p className="font-display text-5xl font-semibold text-black">{stat}</p>
+              <p className="font-display text-4xl font-semibold text-black md:text-5xl">{stat}</p>
               <p className="mt-4 leading-7 text-black">{copy}</p>
             </motion.div>
           ))}

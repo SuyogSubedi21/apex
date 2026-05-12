@@ -6,7 +6,7 @@ import { itemReveal, stagger } from "../utils/animation.js";
 export default function FAQ() {
   return (
     <>
-      <section className="bg-warm px-5 pb-20 pt-40 sm:px-8 lg:px-10 lg:pb-28 lg:pt-32">
+      <section className="bg-warm px-5 pb-20 pt-40 sm:px-8 lg:px-10 lg:pb-24 lg:pt-32">
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             eyebrow="FAQ"
@@ -23,11 +23,11 @@ export default function FAQ() {
           </motion.div>
         </div>
       </section>
-      <section className="bg-charcoal px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28">
+      <section className="bg-charcoal px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-gold">Still deciding?</p>
-            <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[0.98] text-white md:text-6xl">A short project review can reveal a lot.</h2>
+            <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.02] text-white md:text-5xl">A short project review can reveal a lot.</h2>
           </div>
           <a href="/contact" className="btn-primary self-start md:self-end">Ask Apex</a>
         </div>

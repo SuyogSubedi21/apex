@@ -12,15 +12,14 @@ export default {
         line: "rgba(255,255,255,0.18)",
         steel: "#263239",
         steelDark: "#11181d",
-        gold: "#f6b73c"
+        gold: "#d99a2b"
       },
       fontFamily: {
         sans: ["Manrope", "Arial", "sans-serif"],
         display: ["Cormorant Garamond", "Georgia", "serif"]
       },
       boxShadow: {
-        premium: "0 24px 70px rgba(0, 0, 0, 0.14)",
-        glow: "0 24px 80px rgba(246, 183, 60, 0.22)"
+        premium: "0 20px 48px rgba(0, 0, 0, 0.14)"
       }
     }
   },

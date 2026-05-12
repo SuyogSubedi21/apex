@@ -7,13 +7,13 @@ export default function ProjectDetail({ slug }) {
 
   return (
     <>
-      <section className="bg-paper px-5 pb-20 pt-40 sm:px-8 lg:px-10 lg:pb-28 lg:pt-32">
+      <section className="bg-paper px-5 pb-20 pt-40 sm:px-8 lg:px-10 lg:pb-24 lg:pt-32">
         <div className="mx-auto max-w-7xl">
           <a href="/projects" className="text-sm font-extrabold uppercase tracking-[0.16em] text-black transition hover:text-gold">Back to projects</a>
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
             <div>
               <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.22em] text-black">{project.type}</p>
-              <h1 className="font-display text-6xl font-semibold leading-[0.94] text-black md:text-8xl">{project.title}</h1>
+              <h1 className="font-display text-5xl font-semibold leading-[1] text-black md:text-7xl">{project.title}</h1>
               <p className="mt-7 max-w-3xl text-lg leading-8 text-black">{project.summary}</p>
             </div>
             <div className="surface-card p-7">
@@ -28,7 +28,7 @@ export default function ProjectDetail({ slug }) {
               </div>
             </div>
           </div>
-          <motion.div {...imageReveal} className="image-frame mt-12 h-[560px] rounded-sm">
+          <motion.div {...imageReveal} className="image-frame mt-12 h-[420px] rounded-sm sm:h-[500px] lg:h-[540px]">
             <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
           </motion.div>
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
@@ -67,10 +67,10 @@ export default function ProjectDetail({ slug }) {
           </motion.div>
         </div>
       </section>
-      <section className="bg-charcoal px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28">
+      <section className="bg-charcoal px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-gold">Lessons carried forward</p>
-          <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[0.98] text-white md:text-6xl">Good delivery starts when risk is visible enough to manage.</h2>
+          <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-[1.02] text-white md:text-5xl">Good delivery starts when risk is visible enough to manage.</h2>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/72">
             Across projects like {project.title}, Apex focuses on the habits that keep work stable: decision clarity, honest reporting, clean documentation, and field coordination that respects how construction actually happens.
           </p>
